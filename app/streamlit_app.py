@@ -1,13 +1,15 @@
+
 import streamlit as st
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import os
 
 st.title('Asteroid Close-Approach Explorer')
 
-# Load data
-data_path = '../data/asteroids.csv'
+# Load data using an absolute path based on the project root
+data_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'asteroids.csv')
 try:
     df = pd.read_csv(data_path)
     st.success(f"Loaded data from {data_path}")
