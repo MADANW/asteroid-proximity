@@ -1,21 +1,21 @@
 # Asteroid Close-Approach Explorer
 
-An interactive data science project to explore near-Earth asteroid data using NASA’s NeoWs API, with EDA, visualizations, and a Streamlit dashboard.
+An interactive data science project to explore near-Earth asteroid data using NASA’s NeoWs API, with EDA, visualizations, a logistic regression classifier, and a Streamlit dashboard.
 
-##  Project Overview
+## Project Overview
 - Fetches and analyzes near-Earth asteroid data
 - Explores distributions of size, velocity, and closest approaches
-- a simple logistic regression classifier to predict hazardous asteroids
-- Interactive Streamlit app for data exploration
+- Implements a logistic regression classifier to predict hazardous asteroids
+- Interactive Streamlit app for data exploration and ML results
 
-##  Features
+## Features
 - Data fetching and cleaning from NASA NeoWs API
 - Exploratory Data Analysis (EDA) with histograms, scatter plots, and summary tables
 - Top-10 closest asteroids table
-- Streamlit dashboard with interactive charts and data preview
-- (Optional) Hazard classifier results tab
+- Streamlit dashboard with interactive charts, data preview, and classifier results
+- Logistic regression classifier with accuracy and AUROC metrics
 
-##  Setup
+## Setup
 1. **Clone the repository:**
    ```sh
    git clone <your-repo-url>
@@ -41,16 +41,17 @@ An interactive data science project to explore near-Earth asteroid data using NA
     ```sh
     streamlit run app/streamlit_app.py
     ```
-  - The app will load asteroid data and display interactive charts and tables.
+  - The app will load asteroid data, display interactive charts and tables, and let you run the classifier interactively.
 
-## 📊 Example Visualizations
+## Example Visualizations
 - Asteroid size and velocity histograms
 - Scatter plot: size vs. miss distance
 - Top-10 closest approaches table
+- Classifier metrics: accuracy, AUROC, and classification report
 
-## 📝 Credits
+## Credits
 - Data: [NASA NeoWs API](https://api.nasa.gov/)
-- Built with Python, pandas, matplotlib, seaborn, and Streamlit
+- Built with Python, pandas, matplotlib, seaborn, scikit-learn, and Streamlit
 
-## 📄 License
+## License
 MIT License
