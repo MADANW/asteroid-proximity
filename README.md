@@ -5,7 +5,7 @@ An interactive data science project to explore near-Earth asteroid data using NA
 ##  Project Overview
 - Fetches and analyzes near-Earth asteroid data
 - Explores distributions of size, velocity, and closest approaches
-- (Optional) Trains a simple logistic regression classifier to predict hazardous asteroids
+- a simple logistic regression classifier to predict hazardous asteroids
 - Interactive Streamlit app for data exploration
 
 ##  Features

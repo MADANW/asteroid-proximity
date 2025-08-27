@@ -5,6 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(os.path.dirname(__file__)), 'src'))
+from classifier import run_logistic_regression
 
 st.title('Asteroid Close-Approach Explorer')
 
@@ -36,3 +39,12 @@ sns.histplot(df['rel_vel_kps'], bins=30, kde=True, color='orange', ax=ax2)
 ax2.set_xlabel('Relative Velocity (km/s)')
 ax2.set_ylabel('Count')
 st.pyplot(fig2)
+
+# Classifier Results
+st.subheader('Hazardous Asteroid Classifier (Logistic Regression)')
+if st.button('Run Classifier'):
+    results = run_logistic_regression(df)
+    st.metric('Accuracy', f"{results['accuracy']:.3f}")
+    st.metric('AUROC', f"{results['auroc']:.3f}")
+    st.text('Classification Report:')
+    st.text(results['report'])
