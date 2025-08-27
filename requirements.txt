@@ -1,0 +1,9 @@
+requests
+pandas
+matplotlib
+seaborn
+scikit-learn
+streamlit
+jupyter
+python-dotenv
+xlsxwriter
